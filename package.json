@@ -5,7 +5,7 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "nr clean && hexo deploy",
+    "deploy": "rimraf .deploy && nr clean && hexo deploy",
     "serve": "hexo server"
   },
   "keywords": [
@@ -17,6 +17,10 @@
   ],
   "hexo": {
     "version": "6.2.0"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=6.0.0"
   },
   "dependencies": {
     "hexo": "^6.2.0",
