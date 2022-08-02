@@ -6,7 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "rimraf .deploy && nr clean && hexo deploy",
-    "serve": "hexo server"
+    "serve": "nr clean && hexo server"
   },
   "keywords": [
     "dushenyan",
