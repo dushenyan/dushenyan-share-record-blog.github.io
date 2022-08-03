@@ -2,6 +2,7 @@
 title: eslint
 date: 2022-07-31 22:54:50
 categories: 配置工具
+cover: 'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/08r6sxt62vq05awtmww2.png'
 ---
 
 <a name="njHFN"></a>

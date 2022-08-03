@@ -2,6 +2,7 @@
 title: editconfig
 date: 2022-07-31 22:54:50
 categories: 配置工具
+cover: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTL1s6R87D-Ez4SYTOCTNBdROUhQcLZZvB4g&usqp=CAU'
 ---
 
 ## EDITORCONFIG是什么

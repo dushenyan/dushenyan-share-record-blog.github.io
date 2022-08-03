@@ -2,6 +2,7 @@
 title: npm
 date: 2022-07-31 22:54:50
 categories: '配置工具'
+cover: 'https://user-images.githubusercontent.com/29712634/81721690-e2fb5d80-9445-11ea-8602-4b2294c964f3.png'
 ---
 
 ## NPM是什么

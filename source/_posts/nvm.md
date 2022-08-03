@@ -2,6 +2,7 @@
 title: nvm
 date: 2022-07-31 22:54:50
 categories: 配置工具
+cover: 'https://pica.zhimg.com/v2-ea19a310320f2129e8f13617fe549cf9_1440w.jpg?source=172ae18b'
 ---
 
 ## NVM是什么 

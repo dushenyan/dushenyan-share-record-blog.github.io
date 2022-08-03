@@ -2,6 +2,7 @@
 title: vscode
 date: 2022-07-31 22:54:50
 categories: '效率工具'
+cover: 'https://agileviet.vn/content/images/2020/12/1_cn_XBD307E3lObHk511Qqg.png'
 ---
 
 ## VSCODE是什么

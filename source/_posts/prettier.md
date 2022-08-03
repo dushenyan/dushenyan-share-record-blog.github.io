@@ -2,6 +2,7 @@
 title: prettier
 date: 2022-07-31 22:54:50
 categories: '配置工具'
+cover: 'https://repository-images.githubusercontent.com/75104123/f6f27280-61e5-11e9-8759-33288e842a50'
 ---
 
 ## PRETTIER是什么

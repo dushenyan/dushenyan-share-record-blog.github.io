@@ -2,6 +2,7 @@
 title: Git
 date: 2022-07-31 22:54:50
 categories: 配置工具
+cover: 'https://raw.githubusercontent.com/ChiRenhua/Resource/master/WebImage/Git/git_logo.png'
 ---
 
 ## GIT是什么

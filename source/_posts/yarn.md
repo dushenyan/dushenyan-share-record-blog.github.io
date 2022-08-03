@@ -2,7 +2,7 @@
 title: yarn
 date: 2022-07-31 22:54:50
 categories: '配置工具'
-cover: 'https://img5.goodfon.com/wallpaper/nbig/c/b5/las-entinas-ejido-el-andalusia-ocaso-en-punta-entinas-sabina.jpg'
+cover: 'https://i.ytimg.com/vi/7n467QmiANM/maxresdefault.jpg'
 ---
 
 ## YARN是什么
