@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>vscode | dushenyan’Blog</title><meta name="keywords" content="dushenyan blog  share record"><meta name="author" content="dushenyan,2645472474@qq.com"><meta name="copyright" content="dushenyan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="VSCODE是什么 VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器。该软件支持语法高亮、代码自动补全（又称 IntelliSense）、代码重构、查看定义功能，并且内置了命令行工具和 Git 版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装扩展以拓展软件功能。VS Code 使用 Monaco Edi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vscode">
+<meta property="og:url" content="https://dbudaiya.github.io/2022/07/31/vscode/index.html">
+<meta property="og:site_name" content="dushenyan’Blog">
+<meta property="og:description" content="VSCODE是什么 VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器。该软件支持语法高亮、代码自动补全（又称 IntelliSense）、代码重构、查看定义功能，并且内置了命令行工具和 Git 版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装扩展以拓展软件功能。VS Code 使用 Monaco Edi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://agileviet.vn/content/images/2020/12/1_cn_XBD307E3lObHk511Qqg.png">
+<meta property="article:published_time" content="2022-07-31T14:54:50.000Z">
+<meta property="article:modified_time" content="2022-08-03T02:00:39.074Z">
+<meta property="article:author" content="dushenyan">
+<meta property="article:tag" content="dushenyan blog  share record">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://agileviet.vn/content/images/2020/12/1_cn_XBD307E3lObHk511Qqg.png"><link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/63347504"><link rel="canonical" href="https://dbudaiya.github.io/2022/07/31/vscode/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/dushenyan-share-record-blog.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/dushenyan-share-record-blog.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"/dushenyan-share-record-blog.github.io/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'vscode',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-03 10:00:39'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/63347504" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/dushenyan-share-record-blog.github.io/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/dushenyan-share-record-blog.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/dushenyan-share-record-blog.github.io/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://agileviet.vn/content/images/2020/12/1_cn_XBD307E3lObHk511Qqg.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/dushenyan-share-record-blog.github.io/">dushenyan’Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">vscode</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-31T14:54:50.000Z" title="发表于 2022-07-31 22:54:50">2022-07-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-03T02:00:39.074Z" title="更新于 2022-08-03 10:00:39">2022-08-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/dushenyan-share-record-blog.github.io/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/">效率工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="vscode"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="VSCODE是什么"><a href="#VSCODE是什么" class="headerlink" title="VSCODE是什么"></a>VSCODE是什么</h2><hr>
+<p>VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器。该软件支持语法高亮、代码自动补全（又称 IntelliSense）、代码重构、查看定义功能，并且内置了命令行工具和 Git 版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装扩展以拓展软件功能。<br />VS Code 使用 Monaco Editor 作为其底层的代码编辑器。</p>
+<p><a name="VXmJ4"></a></p>
+<h2 id="官网指引"><a href="#官网指引" class="headerlink" title="官网指引"></a>官网指引</h2><hr>
+<p>官网地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a><br />文档地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs">https://code.visualstudio.com/docs</a><br><a name="z4keK"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><hr>
+<p>下载安装so easy 这里不对其过多解释<br />在 VScode 官网首页下载对应系统（支持Windows、Linux、macOS）的软件，下载页面： <a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>  稳定版（Stable）</p>
+<ul>
+<li>解压压缩包，打开可执行文件 点击NEXT</li>
+<li>选中协议 点击NEXT</li>
+<li>选择安装路径 直接使用默认 点击NEXT</li>
+<li>注意安装路径 环境变量默认自动添加到系统中 勾选所有选中项 点击NEXT</li>
+<li>点击install 完成安装</li>
+</ul>
+<p><strong>界面说明</strong><br /><img src="https://cdn.nlark.com/yuque/0/2022/png/1427114/1643247626731-59ffd3ab-0bea-4c2a-9ad0-a8035f8499f8.png#clientId=u94a38fce-139b-4&from=paste&id=ubea5d09b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=977&originWidth=2560&originalType=url&ratio=1&size=611411&status=done&style=none&taskId=ub65601a1-5000-4130-82ce-3bea8ea9a0a" alt="image.png"><br><a name="pJr6d"></a></p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><hr>
+<p><a name="rKjnX"></a></p>
+<h4 id="美化系列"><a href="#美化系列" class="headerlink" title="美化系列"></a>美化系列</h4><p><code>chinese</code> 	汉化版本<br /><code>vscode-icons</code>	文件图标<br /><code>Material Icon Theme</code>	文件图标<br /><code>Atom One Dark Theme</code>	暗色主题<br /><code>Live Server</code>	实时预览<br /><code>Live Server Html</code>	编辑器开窗预览<br /><code>open in Brower</code>		用浏览器打开脚本文件<br /><code>A-super-tranlate</code>	画词翻译<br /><code>Beautify</code>	代码美化<br /><code>ESlint</code>		代码检查<br /><code>Prettier</code>	代码格式化<br /><code>Editconfig</code>		编码格式<br /><code>Bracket Pair Colorizer</code>		给匹配括号上色<br /><code>Markdown Preview Enhanced</code>	MarkDown编写预览<br><a name="JzY1b"></a></p>
+<h4 id="效率系列"><a href="#效率系列" class="headerlink" title="效率系列"></a>效率系列</h4><p><code>vscode-intellij-recent-files</code>	快速在最近文件间切换<br /><code>Code Runner</code>	万能语言运行环境<br /><code>Debugger for Chrome</code>	调试工具<br /><code>Document this</code>	快速注释<br /><code>Code Spell Checker</code>		代码拼写检查<br /><code>TODO Highlight</code>		备忘插件<br /><code>Draw.io Integration</code>	图表工具<br /><code>easy-less</code>		编译less文件<br /><code>Turbo Console Log</code>		快速添加console.log信息<br><a name="ilKkK"></a></p>
+<h4 id="布局样式系列"><a href="#布局样式系列" class="headerlink" title="布局样式系列"></a>布局样式系列</h4><p><code>IntelliSense for CSS class names in HTML</code> 	CSS类名提示<br /><code>Auto Close Tag</code>		自动添加闭合关闭标签<br /><code>HTML Snippets</code>		html代码片段<br /><code>Auto Rename Tag</code>	自动更改标签前后名<br /><code>Highlight Matching</code>		高亮匹配标签<br /><code>CSS Peek</code>	查看css定义<br><a name="Kiuu4"></a></p>
+<h4 id="补充系列"><a href="#补充系列" class="headerlink" title="补充系列"></a>补充系列</h4><p><code>px to rem&amp;rpx</code>  px转换<br><a name="QmvSo"></a></p>
+<h4 id="React系列"><a href="#React系列" class="headerlink" title="React系列"></a>React系列</h4><p><code>JavaScript(ES6) code snippets</code>		es6代码片段 <br /><code>Reactjs code snippets</code>		 React组件片段<br /><code>Typescript React code snippets</code> 	tsx的React组件片段<br><a name="F3kWo"></a></p>
+<h4 id="导入系列"><a href="#导入系列" class="headerlink" title="导入系列"></a>导入系列</h4><p><code>Import Cost</code> 	显示导入包大小<br /><code>Path Intellisence</code>	智能路径提示（例如html文件中需要导入样式脚本文件）<br /><code>npm Intellisense</code>	npm智能提示导入<br><a name="jUuYd"></a></p>
+<h4 id="Vue系列"><a href="#Vue系列" class="headerlink" title="Vue系列"></a>Vue系列</h4><p><code>Vetur</code>	开发vue2支持插件<br /><code>volar</code>	开发vue3支持插件<br /><code>vueDX</code>	vue类型检测 重命名和重构<br><a name="vCz0P"></a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><hr>
+<p><a name="HZ9I4"></a></p>
+<h4 id="系统热键"><a href="#系统热键" class="headerlink" title="系统热键"></a>系统热键</h4><p>这是官方提供的 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">快捷键速查表(opens new window)</a>，下面是中文快捷键说明。</p>
+<table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + Shift + P，F1</td>
+<td>显示命令面板 Show Command Palette</td>
+</tr>
+<tr>
+<td>Ctrl + P</td>
+<td>快速打开 Quick Open</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + N</td>
+<td>新窗口&#x2F;实例 New window&#x2F;instance</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + W</td>
+<td>关闭窗口&#x2F;实例 Close window&#x2F;instance</td>
+</tr>
+</tbody></table>
+<p><a name="PLgzr"></a></p>
+<h4 id="基础编辑"><a href="#基础编辑" class="headerlink" title=" 基础编辑"></a><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E5%9F%BA%E7%A1%80%E7%BC%96%E8%BE%91"> </a>基础编辑</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+X</td>
+<td>剪切行（空选定） Cut line (empty selection)</td>
+</tr>
+<tr>
+<td>Ctrl+C</td>
+<td>复制行（空选定）Copy line (empty selection)</td>
+</tr>
+<tr>
+<td>Alt+ ↑ &#x2F; ↓</td>
+<td>向上&#x2F;向下移动行 Move line up&#x2F;down</td>
+</tr>
+<tr>
+<td>Shift+Alt + ↓ &#x2F; ↑</td>
+<td>向上&#x2F;向下复制行 Copy line up&#x2F;down</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+K</td>
+<td>删除行 Delete line</td>
+</tr>
+<tr>
+<td>Ctrl+Enter</td>
+<td>在下面插入行 Insert line below</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+Enter</td>
+<td>在上面插入行 Insert line above</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+\</td>
+<td>跳到匹配的括号 Jump to matching bracket</td>
+</tr>
+<tr>
+<td>Ctrl+] &#x2F; [</td>
+<td>缩进&#x2F;缩进行 Indent&#x2F;outdent line</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>转到行首 Go to beginning of line</td>
+</tr>
+<tr>
+<td>End</td>
+<td>转到行尾 Go to end of line</td>
+</tr>
+<tr>
+<td>Ctrl+Home</td>
+<td>转到文件开头 Go to beginning of file</td>
+</tr>
+<tr>
+<td>Ctrl+End</td>
+<td>转到文件末尾 Go to end of file</td>
+</tr>
+<tr>
+<td>Ctrl+↑ &#x2F; ↓</td>
+<td>向上&#x2F;向下滚动行 Scroll line up&#x2F;down</td>
+</tr>
+<tr>
+<td>Alt+PgUp &#x2F; PgDown</td>
+<td>向上&#x2F;向下滚动页面 Scroll page up&#x2F;down</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+[</td>
+<td>折叠（折叠）区域 Fold (collapse) region</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+]</td>
+<td>展开（未折叠）区域 Unfold (uncollapse) region</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+[</td>
+<td>折叠（未折叠）所有子区域 Fold (collapse) all subregions</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+]</td>
+<td>展开（未折叠）所有子区域 Unfold (uncollapse) all subregions</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+0</td>
+<td>折叠（折叠）所有区域 Fold (collapse) all regions</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+J</td>
+<td>展开（未折叠）所有区域 Unfold (uncollapse) all regions</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+C</td>
+<td>添加行注释 Add line comment</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+U</td>
+<td>删除行注释 Remove line comment</td>
+</tr>
+<tr>
+<td>Ctrl+&#x2F;</td>
+<td>切换行注释 Toggle line comment</td>
+</tr>
+<tr>
+<td>Shift+Alt+A</td>
+<td>切换块注释 Toggle block comment</td>
+</tr>
+<tr>
+<td>Alt+Z</td>
+<td>切换换行 Toggle word wrap</td>
+</tr>
+<tr>
+<td>Ctrl+Alt</td>
+<td>键盘上向上或者向下键，使一列上出现多个光标</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+l</td>
+<td>选择相同的词统一编辑</td>
+</tr>
+<tr>
+<td>Shift+Alt+鼠标拖动</td>
+<td>选择区域进行编辑</td>
+</tr>
+</tbody></table>
+<p><a name="nHpd3"></a></p>
+<h4 id="导航控制"><a href="#导航控制" class="headerlink" title=" 导航控制"></a><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E5%AF%BC%E8%88%AA%E6%8E%A7%E5%88%B6"> </a>导航控制</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + T</td>
+<td>显示所有符号 Show all Symbols</td>
+</tr>
+<tr>
+<td>Ctrl + G</td>
+<td>转到行… Go to Line…</td>
+</tr>
+<tr>
+<td>Ctrl + P</td>
+<td>转到文件… Go to File…</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + O</td>
+<td>转到符号… Go to Symbol…</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + M</td>
+<td>显示问题面板 Show Problems panel</td>
+</tr>
+<tr>
+<td>F8</td>
+<td>转到下一个错误或警告 Go to next error or warning</td>
+</tr>
+<tr>
+<td>Shift + F8</td>
+<td>转到上一个错误或警告 Go to previous error or warning</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Tab</td>
+<td>导航编辑器组历史记录 Navigate editor group history</td>
+</tr>
+<tr>
+<td>Alt + ←&#x2F;→</td>
+<td>返回&#x2F;前进 Go back &#x2F; forward</td>
+</tr>
+<tr>
+<td>Ctrl + M</td>
+<td>切换选项卡移动焦点 Toggle Tab moves focus</td>
+</tr>
+</tbody></table>
+<p><a name="BsYp3"></a></p>
+<h4 id="搜索和替换"><a href="#搜索和替换" class="headerlink" title=" 搜索和替换"></a><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E6%90%9C%E7%B4%A2%E5%92%8C%E6%9B%BF%E6%8D%A2"> </a>搜索和替换</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + F</td>
+<td>查找 Find</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>替换 Replace</td>
+</tr>
+<tr>
+<td>F3 &#x2F; Shift + F3</td>
+<td>查找下一个&#x2F;上一个 Find next&#x2F;previous</td>
+</tr>
+<tr>
+<td>Alt + Enter</td>
+<td>选择查找匹配的所有出现 Select all occurences of Find match</td>
+</tr>
+<tr>
+<td>Ctrl + D</td>
+<td>将选择添加到下一个查找匹配 Add selection to next Find match</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + D</td>
+<td>将最后一个选择移至下一个查找匹配项 Move last selection to next Find match</td>
+</tr>
+<tr>
+<td>Alt + C &#x2F; R &#x2F; W</td>
+<td>切换区分大小写&#x2F;正则表达式&#x2F;整个词 Toggle case-sensitive &#x2F; regex &#x2F; whole word</td>
+</tr>
+</tbody></table>
+<p><a name="imaLL"></a></p>
+<h4 id="多光标和选择"><a href="#多光标和选择" class="headerlink" title=" 多光标和选择"></a><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E5%A4%9A%E5%85%89%E6%A0%87%E5%92%8C%E9%80%89%E6%8B%A9"> </a>多光标和选择</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alt +单击</td>
+<td>插入光标 Insert cursor</td>
+</tr>
+<tr>
+<td>Ctrl + Alt +↑&#x2F;↓</td>
+<td>在上&#x2F;下插入光标 Insert cursor above &#x2F; below</td>
+</tr>
+<tr>
+<td>Ctrl + U</td>
+<td>撤消上一个光标操作 Undo last cursor operation</td>
+</tr>
+<tr>
+<td>Shift + Alt + I</td>
+<td>在选定的每一行的末尾插入光标 Insert cursor at end of each line selected</td>
+</tr>
+<tr>
+<td>Ctrl + I</td>
+<td>选择当前行 Select current line</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + L</td>
+<td>选择当前选择的所有出现 Select all occurrences of current selection</td>
+</tr>
+<tr>
+<td>Ctrl + F2</td>
+<td>选择当前字的所有出现 Select all occurrences of current word</td>
+</tr>
+<tr>
+<td>Shift + Alt + →</td>
+<td>展开选择 Expand selection</td>
+</tr>
+<tr>
+<td>Shift + Alt + ←</td>
+<td>缩小选择 Shrink selection</td>
+</tr>
+<tr>
+<td>Shift + Alt + （拖动鼠标）</td>
+<td>列（框）选择 Column (box) selection</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Alt +（箭头键）</td>
+<td>列（框）选择 Column (box) selection</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Alt + PgUp &#x2F; PgDown</td>
+<td>列（框）选择页上&#x2F;下 Column (box) selection page up&#x2F;down</td>
+</tr>
+<tr>
+<td>zc</td>
+<td>折叠代码块</td>
+</tr>
+<tr>
+<td>zo</td>
+<td>展开代码块</td>
+</tr>
+<tr>
+<td>zC</td>
+<td>折叠所有代码块</td>
+</tr>
+<tr>
+<td>zO</td>
+<td>展开所有代码块</td>
+</tr>
+</tbody></table>
+<p><a name="NaaOI"></a></p>
+<h4 id="语言编辑"><a href="#语言编辑" class="headerlink" title=" 语言编辑"></a><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E8%AF%AD%E8%A8%80%E7%BC%96%E8%BE%91"> </a>语言编辑</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + 空格</td>
+<td>触发建议 Trigger suggestion</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Space</td>
+<td>触发器参数提示 Trigger parameter hints</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Emmet 展开缩写 Emmet expand abbreviation</td>
+</tr>
+<tr>
+<td>Shift + Alt + F</td>
+<td>格式化文档 Format document</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + F</td>
+<td>格式选定区域 Format selection</td>
+</tr>
+<tr>
+<td>F12</td>
+<td>转到定义 Go to Definition</td>
+</tr>
+<tr>
+<td>Alt + F12</td>
+<td>Peek定义 Peek Definition</td>
+</tr>
+<tr>
+<td>Ctrl + K F12</td>
+<td>打开定义到边 Open Definition to the side</td>
+</tr>
+<tr>
+<td>Ctrl + .</td>
+<td>快速解决 Quick Fix</td>
+</tr>
+<tr>
+<td>Shift + F12</td>
+<td>显示引用 Show References</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>重命名符号 Rename Symbol</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + . &#x2F;，</td>
+<td>替换为下一个&#x2F;上一个值 Replace with next&#x2F;previous value</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + X</td>
+<td>修剪尾随空格 Trim trailing whitespace</td>
+</tr>
+<tr>
+<td>Ctrl + K M</td>
+<td>更改文件语言 Change file language</td>
+</tr>
+</tbody></table>
+<p><a name="ZaDNK"></a></p>
+<h4 id="窗口管理"><a href="#窗口管理" class="headerlink" title=" 窗口管理"></a><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86"> </a>窗口管理</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+F4, Ctrl+W</td>
+<td>关闭编辑器 Close editor</td>
+</tr>
+<tr>
+<td>Ctrl+K F</td>
+<td>关闭文件夹 Close folder</td>
+</tr>
+<tr>
+<td>Ctrl+\</td>
+<td>拆分编辑器 Split editor</td>
+</tr>
+<tr>
+<td>Ctrl+ 1 &#x2F; 2 &#x2F; 3</td>
+<td>聚焦到第1，第2或第3编辑器组 Focus into 1st, 2nd or 3rd editor group</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+ ←&#x2F;→</td>
+<td>聚焦到上一个&#x2F;下一个编辑器组 Focus into previous&#x2F;next editor group</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+PgUp &#x2F; PgDown</td>
+<td>向左&#x2F;向右移动编辑器 Move editor left&#x2F;right</td>
+</tr>
+<tr>
+<td>Ctrl+K ← &#x2F; →</td>
+<td>移动活动编辑器组 Move active editor group</td>
+</tr>
+</tbody></table>
+<p><a name="lthFG"></a></p>
+<h4 id="文件管理"><a href="#文件管理" class="headerlink" title=" 文件管理"></a><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"> </a>文件管理</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+N</td>
+<td>新文件 New File</td>
+</tr>
+<tr>
+<td>Ctrl+O</td>
+<td>打开文件… Open File…</td>
+</tr>
+<tr>
+<td>Ctrl+S</td>
+<td>保存 Save</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+S</td>
+<td>另存为… Save As…</td>
+</tr>
+<tr>
+<td>Ctrl+K S</td>
+<td>全部保存 Save All</td>
+</tr>
+<tr>
+<td>Ctrl+F4</td>
+<td>关闭 Close</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+W</td>
+<td>关闭所有 Close All</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+T</td>
+<td>重新打开关闭的编辑器 Reopen closed editor</td>
+</tr>
+<tr>
+<td>Ctrl+K</td>
+<td>输入保持打开 Enter Keep Open</td>
+</tr>
+<tr>
+<td>Ctrl+Tab</td>
+<td>打开下一个 Open next</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+Tab</td>
+<td>打开上一个 Open previous</td>
+</tr>
+<tr>
+<td>Ctrl+K P</td>
+<td>复制活动文件的路径 Copy path of active file</td>
+</tr>
+<tr>
+<td>Ctrl+K R</td>
+<td>显示资源管理器中的活动文件 Reveal active file in Explorer</td>
+</tr>
+<tr>
+<td>Ctrl+K O</td>
+<td>显示新窗口&#x2F;实例中的活动文件 Show active file in new window&#x2F;instance</td>
+</tr>
+</tbody></table>
+<p><a name="DG23k"></a></p>
+<h4 id="显示控制"><a href="#显示控制" class="headerlink" title=" 显示控制"></a><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E6%98%BE%E7%A4%BA%E6%8E%A7%E5%88%B6"> </a>显示控制</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F11</td>
+<td>切换全屏 Toggle full screen</td>
+</tr>
+<tr>
+<td>Shift+Alt+1</td>
+<td>切换编辑器布局 Toggle editor layout</td>
+</tr>
+<tr>
+<td>Ctrl+ &#x3D; &#x2F; -</td>
+<td>放大&#x2F;缩小 Zoom in&#x2F;out</td>
+</tr>
+<tr>
+<td>Ctrl+B</td>
+<td>切换侧栏可见性 Toggle Sidebar visibility</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+E</td>
+<td>显示浏览器&#x2F;切换焦点 Show Explorer &#x2F; Toggle focus</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+F</td>
+<td>显示搜索 Show Search</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+G</td>
+<td>显示Git Show Git</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+D</td>
+<td>显示调试 Show Debug</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+X</td>
+<td>显示扩展 Show Extensions</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+H</td>
+<td>替换文件 Replace in files</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+J</td>
+<td>切换搜索详细信息 Toggle Search details</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+C</td>
+<td>打开新命令提示符&#x2F;终端 Open new command prompt&#x2F;terminal</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+U</td>
+<td>显示输出面板 Show Output panel</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+V</td>
+<td>切换Markdown预览 Toggle Markdown preview</td>
+</tr>
+<tr>
+<td>Ctrl+K V</td>
+<td>从旁边打开Markdown预览 Open Markdown preview to the side</td>
+</tr>
+</tbody></table>
+<p><a name="JpIxB"></a></p>
+<h4 id="代码调试"><a href="#代码调试" class="headerlink" title="代码调试"></a>代码调试</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F9</td>
+<td>切换断点 Toggle breakpoint</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>开始&#x2F;继续 Start&#x2F;Continue</td>
+</tr>
+<tr>
+<td>Shift+F5</td>
+<td>停止 Stop</td>
+</tr>
+<tr>
+<td>F11 &#x2F; Shift+F11</td>
+<td>下一步&#x2F;上一步 Step into&#x2F;out</td>
+</tr>
+<tr>
+<td>F10</td>
+<td>跳过 Step over</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+I</td>
+<td>显示悬停 Show hover</td>
+</tr>
+</tbody></table>
+<p><a name="ET2cM"></a></p>
+<h4 id="集成终端"><a href="#集成终端" class="headerlink" title="集成终端"></a>集成终端</h4><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+&#96;</td>
+<td>显示集成终端 Show integrated terminal</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+&#96;</td>
+<td>创建新终端 Create new terminal</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+C</td>
+<td>复制选定 Copy selection</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+V</td>
+<td>粘贴到活动端子 Paste into active terminal</td>
+</tr>
+<tr>
+<td>Ctrl+↑ &#x2F; ↓</td>
+<td>向上&#x2F;向下滚动 Scroll up&#x2F;down</td>
+</tr>
+<tr>
+<td>Shift+PgUp &#x2F; PgDown</td>
+<td>向上&#x2F;向下滚动页面 Scroll page up&#x2F;down</td>
+</tr>
+<tr>
+<td>Ctrl+Home &#x2F; End</td>
+<td>滚动到顶部&#x2F;底部 Scroll to top&#x2F;bottom</td>
+</tr>
+</tbody></table>
+<p><a name="bOelZ"></a></p>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><hr>
+<p><a name="Dr27T"></a></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><hr>
+<p>更多调试配置项查看：<br /><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E4%B8%AD%E6%96%87%E8%AF%AD%E8%A8%80">https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html %E4%B8%AD%E6%96%87%E8%AF%AD%E8%A8%80</a><br><a name="Phzoy"></a></p>
+<h2 id="相关网站"><a href="#相关网站" class="headerlink" title="相关网站"></a>相关网站</h2><hr>
+<p><a target="_blank" rel="noopener" href="https://vscode.cool/">https://vscode.cool/</a><br /><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1796162">https://cloud.tencent.com/developer/article/1796162</a> *<br /><a target="_blank" rel="noopener" href="https://www.php.cn/tool/vscode/">https://www.php.cn/tool/vscode/</a>  *<br /><a target="_blank" rel="noopener" href="https://aijishu.com/a/1060000000094032">https://aijishu.com/a/1060000000094032</a><br /><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/vscode-tutorial.html">https://www.runoob.com/w3cnote/vscode-tutorial.html</a><br /><a target="_blank" rel="noopener" href="https://www.axihe.com/tools/vscode/skill/vscode-add-code-comments.html">https://www.axihe.com/tools/vscode/skill/vscode-add-code-comments.html</a> *<br /><a target="_blank" rel="noopener" href="https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html#%E4%B8%AD%E6%96%87%E8%AF%AD%E8%A8%80">https://doc.houdunren.com/vscode/1%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html %E4%B8%AD%E6%96%87%E8%AF%AD%E8%A8%80</a></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://agileviet.vn/content/images/2020/12/1_cn_XBD307E3lObHk511Qqg.png" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/dushenyan-share-record-blog.github.io/2022/07/31/prettier/"><img class="prev-cover" src="https://repository-images.githubusercontent.com/75104123/f6f27280-61e5-11e9-8759-33288e842a50" onerror="onerror=null;src='/dushenyan-share-record-blog.github.io/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">prettier</div></div></a></div><div class="next-post pull-right"><a href="/dushenyan-share-record-blog.github.io/2022/07/31/yarn/"><img class="next-cover" src="https://i.ytimg.com/vi/7n467QmiANM/maxresdefault.jpg" onerror="onerror=null;src='/dushenyan-share-record-blog.github.io/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">yarn</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCODE%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text">VSCODE是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E6%8C%87%E5%BC%95"><span class="toc-number">2.</span> <span class="toc-text">官网指引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BE%8E%E5%8C%96%E7%B3%BB%E5%88%97"><span class="toc-number">4.0.1.</span> <span class="toc-text">美化系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%88%E7%8E%87%E7%B3%BB%E5%88%97"><span class="toc-number">4.0.2.</span> <span class="toc-text">效率系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%83%E5%B1%80%E6%A0%B7%E5%BC%8F%E7%B3%BB%E5%88%97"><span class="toc-number">4.0.3.</span> <span class="toc-text">布局样式系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E7%B3%BB%E5%88%97"><span class="toc-number">4.0.4.</span> <span class="toc-text">补充系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#React%E7%B3%BB%E5%88%97"><span class="toc-number">4.0.5.</span> <span class="toc-text">React系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E7%B3%BB%E5%88%97"><span class="toc-number">4.0.6.</span> <span class="toc-text">导入系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue%E7%B3%BB%E5%88%97"><span class="toc-number">4.0.7.</span> <span class="toc-text">Vue系列</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">5.</span> <span class="toc-text">快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%83%AD%E9%94%AE"><span class="toc-number">5.0.1.</span> <span class="toc-text">系统热键</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%BC%96%E8%BE%91"><span class="toc-number">5.0.2.</span> <span class="toc-text">基础编辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA%E6%8E%A7%E5%88%B6"><span class="toc-number">5.0.3.</span> <span class="toc-text">导航控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E5%92%8C%E6%9B%BF%E6%8D%A2"><span class="toc-number">5.0.4.</span> <span class="toc-text">搜索和替换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E5%85%89%E6%A0%87%E5%92%8C%E9%80%89%E6%8B%A9"><span class="toc-number">5.0.5.</span> <span class="toc-text">多光标和选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E7%BC%96%E8%BE%91"><span class="toc-number">5.0.6.</span> <span class="toc-text">语言编辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86"><span class="toc-number">5.0.7.</span> <span class="toc-text">窗口管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="toc-number">5.0.8.</span> <span class="toc-text">文件管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%8E%A7%E5%88%B6"><span class="toc-number">5.0.9.</span> <span class="toc-text">显示控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%B0%83%E8%AF%95"><span class="toc-number">5.0.10.</span> <span class="toc-text">代码调试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E7%BB%88%E7%AB%AF"><span class="toc-number">5.0.11.</span> <span class="toc-text">集成终端</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E8%AF%95"><span class="toc-number">6.</span> <span class="toc-text">调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">7.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99"><span class="toc-number">8.</span> <span class="toc-text">相关网站</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By dushenyan</div><div class="footer_custom_text">衣带渐宽终不悔 为伊消得人憔悴</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/dushenyan-share-record-blog.github.io/js/utils.js"></script><script src="/dushenyan-share-record-blog.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/dushenyan-share-record-blog.github.io/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

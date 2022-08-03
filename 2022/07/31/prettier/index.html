@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>prettier | dushenyan’Blog</title><meta name="keywords" content="dushenyan blog  share record"><meta name="author" content="dushenyan,2645472474@qq.com"><meta name="copyright" content="dushenyan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="PRETTIER是什么 prettier 介绍是一个支持多种语言的 opinionated 代码格式化工具，可以集成到多种编辑器，支持少量的配置。所谓 opinionated，英文翻译为武断的，固执己见的，也就是说 prettier 的配置都是设计好的，不支持自由配置（类似于 Mac，东西都在主板上给你焊死了，不支持自己升级配置） 原理 prettier 的原理很简单，就是把你的代码转化成一个抽象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="prettier">
+<meta property="og:url" content="https://dbudaiya.github.io/2022/07/31/prettier/index.html">
+<meta property="og:site_name" content="dushenyan’Blog">
+<meta property="og:description" content="PRETTIER是什么 prettier 介绍是一个支持多种语言的 opinionated 代码格式化工具，可以集成到多种编辑器，支持少量的配置。所谓 opinionated，英文翻译为武断的，固执己见的，也就是说 prettier 的配置都是设计好的，不支持自由配置（类似于 Mac，东西都在主板上给你焊死了，不支持自己升级配置） 原理 prettier 的原理很简单，就是把你的代码转化成一个抽象">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://repository-images.githubusercontent.com/75104123/f6f27280-61e5-11e9-8759-33288e842a50">
+<meta property="article:published_time" content="2022-07-31T14:54:50.000Z">
+<meta property="article:modified_time" content="2022-08-03T02:01:07.269Z">
+<meta property="article:author" content="dushenyan">
+<meta property="article:tag" content="dushenyan blog  share record">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://repository-images.githubusercontent.com/75104123/f6f27280-61e5-11e9-8759-33288e842a50"><link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/63347504"><link rel="canonical" href="https://dbudaiya.github.io/2022/07/31/prettier/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/dushenyan-share-record-blog.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/dushenyan-share-record-blog.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"/dushenyan-share-record-blog.github.io/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'prettier',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-03 10:01:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/63347504" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/dushenyan-share-record-blog.github.io/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/dushenyan-share-record-blog.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/dushenyan-share-record-blog.github.io/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://repository-images.githubusercontent.com/75104123/f6f27280-61e5-11e9-8759-33288e842a50')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/dushenyan-share-record-blog.github.io/">dushenyan’Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">prettier</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-31T14:54:50.000Z" title="发表于 2022-07-31 22:54:50">2022-07-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-03T02:01:07.269Z" title="更新于 2022-08-03 10:01:07">2022-08-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/dushenyan-share-record-blog.github.io/categories/%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7/">配置工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="prettier"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="PRETTIER是什么"><a href="#PRETTIER是什么" class="headerlink" title="PRETTIER是什么"></a>PRETTIER是什么</h2><hr>
+<p>prettier 介绍是一个支持多种语言的 opinionated 代码格式化工具，可以集成到多种编辑器，支持少量的配置。所谓 opinionated，英文翻译为武断的，固执己见的，也就是说 prettier 的配置都是设计好的，不支持自由配置（类似于 Mac，东西都在主板上给你焊死了，不支持自己升级配置）<br><a name="GhBxl"></a></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><hr>
+<p>prettier 的原理很简单，就是把你的代码转化成一个抽象语法树 AST （因为 AST 是跟原本的代码风格无关的），然后根据 AST 将代码按照 prettier 的风格输出即可。想要看看 prettier 的转化过程，可以看 prettier 官方提供的<a target="_blank" rel="noopener" href="https://prettier.io/playground/">检测网站</a>（如果你有 issue 要提交也是先到这个页面复现你的 bug 然后提交链接到 github）。<br><a name="oupFq"></a></p>
+<h2 id="官网指引"><a href="#官网指引" class="headerlink" title="官网指引"></a>官网指引</h2><hr>
+<p>中文官网：<a target="_blank" rel="noopener" href="https://www.prettier.cn/">https://www.prettier.cn/</a><br />在线格式化：<a target="_blank" rel="noopener" href="https://prettier.io/playground/">https://prettier.io/playground/</a><br><a name="QbWv6"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><hr>
+<p>最基础的使用方式就是使用 yarn 或者 npm 安装，然后在命令行使用。</p>
+<blockquote>
+<p>npm install –save-dev –save-exact prettier<br>yarn add –dev –exact prettier </p>
+</blockquote>
+<p>然后在文件夹中创建配置文件和 ignore 文件。关于配置文件支持多种形式：</p>
+<ul>
+<li>在 package.json 中添加一个 prettier 对象，在内部写入配置。</li>
+<li>一个 JSON 或 YAML 格式的 .prettierrc 文件。</li>
+<li>一个 .prettierrc.json, .prettierrc.yml, .prettierrc.yaml, 或 .prettierrc.json5 文件。</li>
+<li>一个 .prettierrc.js, .prettierrc.cjs, prettier.config.js 或 prettier.config.cjs 文件，文件要用 module.exports exprts 一个对象。</li>
+<li>一个 prettierrc.toml 文件。<br><a name="tVlNs"></a></li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><hr>
+<p><strong>操作选择在</strong><code>**工程目录**</code><strong>下进行</strong><br /><strong>.prettier.js文件创建格式化参考规则</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//此处的规则供参考，其中多半其实都是默认值，可以根据个人习惯改写</span></span><br><span class="line">module.exports = <span class="punctuation">&#123;</span></span><br><span class="line">  printWidth<span class="punctuation">:</span> <span class="number">80</span><span class="punctuation">,</span> <span class="comment">//单行长度</span></span><br><span class="line">  tabWidth<span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span> <span class="comment">//缩进长度</span></span><br><span class="line">  useTabs<span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">//使用空格代替tab缩进</span></span><br><span class="line">  semi<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//句末使用分号</span></span><br><span class="line">  singleQuote<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//使用单引号</span></span><br><span class="line">  quoteProps<span class="punctuation">:</span> &#x27;as-needed&#x27;<span class="punctuation">,</span> <span class="comment">//仅在必需时为对象的key添加引号</span></span><br><span class="line">  jsxSingleQuote<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">// jsx中使用单引号</span></span><br><span class="line">  trailingComma<span class="punctuation">:</span> &#x27;all&#x27;<span class="punctuation">,</span> <span class="comment">//多行时尽可能打印尾随逗号</span></span><br><span class="line">  bracketSpacing<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//在对象前后添加空格-eg: &#123; foo: bar &#125;</span></span><br><span class="line">  jsxBracketSameLine<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//多属性html标签的‘&gt;’折行放置</span></span><br><span class="line">  arrowParens<span class="punctuation">:</span> &#x27;always&#x27;<span class="punctuation">,</span> <span class="comment">//单参数箭头函数参数周围使用圆括号-eg: (x) =&gt; x</span></span><br><span class="line">  requirePragma<span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">//无需顶部注释即可格式化</span></span><br><span class="line">  insertPragma<span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">//在已被preitter格式化的文件顶部加上标注</span></span><br><span class="line">  proseWrap<span class="punctuation">:</span> &#x27;preserve&#x27;<span class="punctuation">,</span> <span class="comment">//不知道怎么翻译</span></span><br><span class="line">  htmlWhitespaceSensitivity<span class="punctuation">:</span> &#x27;ignore&#x27;<span class="punctuation">,</span> <span class="comment">//对HTML全局空白不敏感</span></span><br><span class="line">  vueIndentScriptAndStyle<span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">//不对vue中的script及style标签缩进</span></span><br><span class="line">  endOfLine<span class="punctuation">:</span> &#x27;lf&#x27;<span class="punctuation">,</span> <span class="comment">//结束行形式</span></span><br><span class="line">  embeddedLanguageFormatting<span class="punctuation">:</span> &#x27;auto&#x27;<span class="punctuation">,</span> <span class="comment">//对引用代码进行格式化</span></span><br><span class="line"><span class="punctuation">&#125;</span>;</span><br></pre></td></tr></table></figure>
+<p><strong>.prettierignore忽略文件格式化</strong></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">node_modules</span><br><span class="line">node_modules/**/*</span><br><span class="line">node_modules/**/*.*</span><br><span class="line">/dist</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># local env files</span></span><br><span class="line">.env.local</span><br><span class="line">.env.*.local</span><br><span class="line"></span><br><span class="line"><span class="comment"># Log files</span></span><br><span class="line">npm-debug.log*</span><br><span class="line">yarn-debug.log*</span><br><span class="line">yarn-error.log*</span><br><span class="line">pnpm-debug.log*</span><br><span class="line"></span><br><span class="line"><span class="comment"># Editor directories and files</span></span><br><span class="line">.idea</span><br><span class="line">.vscode</span><br><span class="line">*.suo</span><br><span class="line">*.ntvs*</span><br><span class="line">*.njsproj</span><br><span class="line">*.sln</span><br><span class="line">*.sw?</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重要的环境依赖文件</span></span><br><span class="line">package.json</span><br><span class="line">package.lock.json</span><br><span class="line"></span><br><span class="line"><span class="comment"># 代码格式化插件的配置文件</span></span><br><span class="line">.prettierrc</span><br><span class="line">.prettierignore</span><br><span class="line"></span><br><span class="line"><span class="comment"># git忽略文件</span></span><br><span class="line">.gitignore</span><br><span class="line"></span><br><span class="line"><span class="comment"># 不对markdown进行格式化, 容易打乱自己编排的样式</span></span><br><span class="line">*.md</span><br></pre></td></tr></table></figure>
+<p><a name="JtDKu"></a></p>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><hr>
+<p><strong>命令行格式化</strong><br />（1）格式化全部文档</p>
+<blockquote>
+<p>npx prettier –write .<br> &#x2F;&#x2F;或<br>yarn prettier –write . </p>
+</blockquote>
+<p>（2）格式化指定文档</p>
+<blockquote>
+<p>npx prettier –write src&#x2F;components&#x2F;Button.js<br>&#x2F;&#x2F;或<br>yarn prettier –write src&#x2F;components&#x2F;Button.js </p>
+</blockquote>
+<p>（3）检查文档是否已格式化</p>
+<blockquote>
+<p>npx prettier –check .<br>&#x2F;&#x2F;或<br>yarn prettier –check . &#x2F;&#x2F;检查指定文件同上</p>
+</blockquote>
+<p><a name="KfD5x"></a></p>
+<h2 id="集成"><a href="#集成" class="headerlink" title="集成"></a>集成</h2><hr>
+<p><a name="PLga8"></a></p>
+<h3 id="利用编辑器插件进行格式化"><a href="#利用编辑器插件进行格式化" class="headerlink" title="利用编辑器插件进行格式化"></a>利用编辑器插件进行格式化</h3><p>在编辑器中搜索相应的 Prettier 安装，即可运用编辑器快捷键进行格式化。</p>
+<table>
+<thead>
+<tr>
+<th>常见的编辑器</th>
+<th>对应插件名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VS Code</td>
+<td>Prettier - Code formatter</td>
+</tr>
+<tr>
+<td>Emacs</td>
+<td>prettier-emacs</td>
+</tr>
+<tr>
+<td>Vim</td>
+<td>vim-prettier</td>
+</tr>
+<tr>
+<td>Sublime Text</td>
+<td>JsPrettier</td>
+</tr>
+<tr>
+<td>Atom</td>
+<td>prettier-atom</td>
+</tr>
+</tbody></table>
+<p>重要提示：编辑器中的 Prettier 格式化规则也可在设置中编写，但实际执行时会以本地规则为优先。</p>
+<p>在命令行中使用时非常麻烦的，一般来说我们都是在编辑器中使用 prettier。这里讲一讲我平时在 vscode 中的配置。<br />首先是安装 extension：<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">prettier – vscode</a>。然后用快捷键 ⇧ + ⌘ + P 来启动 Command palette，找到 format XXX with 然后选择 Configure default formatter，选择 prettier 即可设置为默认的格式化工具。<br />想要在保存时自动格式化，我们可以用 ⌘ + , 打开设置页面，找到 format on save 打上勾即可。<br />这些配置都是可以在 setting.json 中进行配置的，这里我放上我的关于 prettier 的 vscode 配置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;editor.formatOnSave&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">//prettier</span></span><br><span class="line">    <span class="string">&quot;[html]&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;[javascript]&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;[typescript]&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;[css]&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;[less]&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/*  prettier的配置 */</span></span><br><span class="line">    <span class="string">&quot;prettier.printWidth&quot;</span>: <span class="number">100</span>, <span class="comment">// 超过最大值换行</span></span><br><span class="line">    <span class="string">&quot;prettier.tabWidth&quot;</span>: <span class="number">4</span>, <span class="comment">// 缩进字节数</span></span><br><span class="line">    <span class="string">&quot;prettier.useTabs&quot;</span>: <span class="literal">false</span>, <span class="comment">// 缩进不使用tab，使用空格</span></span><br><span class="line">    <span class="string">&quot;prettier.semi&quot;</span>: <span class="literal">true</span>, <span class="comment">// 句尾添加分号</span></span><br><span class="line">    <span class="string">&quot;prettier.singleQuote&quot;</span>: <span class="literal">true</span>, <span class="comment">// 使用单引号代替双引号</span></span><br><span class="line">    <span class="string">&quot;prettier.proseWrap&quot;</span>: <span class="string">&quot;preserve&quot;</span>, <span class="comment">// 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行</span></span><br><span class="line">    <span class="string">&quot;prettier.arrowParens&quot;</span>: <span class="string">&quot;avoid&quot;</span>, <span class="comment">//  (x) =&gt; &#123;&#125; 箭头函数参数只有一个时是否要有小括号。avoid：省略括号</span></span><br><span class="line">    <span class="string">&quot;prettier.bracketSpacing&quot;</span>: <span class="literal">true</span>, <span class="comment">// 在对象，数组括号与文字之间加空格 &quot;&#123; foo: bar &#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;prettier.disableLanguages&quot;</span>: [<span class="string">&quot;vue&quot;</span>], <span class="comment">// 不格式化vue文件，vue文件的格式化单独设置</span></span><br><span class="line">    <span class="string">&quot;prettier.endOfLine&quot;</span>: <span class="string">&quot;auto&quot;</span>, <span class="comment">// 结尾是 \n \r \n\r auto</span></span><br><span class="line">    <span class="comment">//&quot;prettier.eslintIntegration&quot;: false, //不让prettier使用eslint的代码格式进行校验</span></span><br><span class="line">    <span class="string">&quot;prettier.htmlWhitespaceSensitivity&quot;</span>: <span class="string">&quot;ignore&quot;</span>,</span><br><span class="line">    <span class="string">&quot;prettier.ignorePath&quot;</span>: <span class="string">&quot;.prettierignore&quot;</span>, <span class="comment">// 不使用prettier格式化的文件填写在项目的.prettierignore文件中</span></span><br><span class="line">    <span class="string">&quot;prettier.jsxBracketSameLine&quot;</span>: <span class="literal">false</span>, <span class="comment">// 在jsx中把&#x27;&gt;&#x27; 是否单独放一行</span></span><br><span class="line">    <span class="string">&quot;prettier.jsxSingleQuote&quot;</span>: <span class="literal">false</span>, <span class="comment">// 在jsx中使用单引号代替双引号</span></span><br><span class="line">    <span class="string">&quot;prettier.requireConfig&quot;</span>: <span class="literal">false</span>, <span class="comment">// Require a &#x27;prettierconfig&#x27; to format prettier</span></span><br><span class="line">    <span class="string">&quot;prettier.trailingComma&quot;</span>: <span class="string">&quot;es5&quot;</span>, <span class="comment">// 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>setting.json 中的配置是对所有项目生效的，你也可以在项目中创建 prettier 的配置文件进行覆盖。<br><a name="wQ8om"></a></p>
+<h2 id="配合其它工具使用"><a href="#配合其它工具使用" class="headerlink" title="配合其它工具使用"></a>配合其它工具使用</h2><hr>
+<p>通常我们会使用 Linter 来检查代码的规范，比如 ESLint、TSLint、Stylelint。他们在某些规则上会与 Prettier 相互矛盾。<br />解决这个问题我以 ESLint 为例，安装 eslint-config-prettier，并在 ESLint 的配置文件的 extends 添加 prettier。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .eslintrc.json</span></span><br><span class="line">&#123;····</span><br><span class="line">  <span class="string">&quot;extends&quot;</span>: [<span class="string">&quot;eslint:recommended&quot;</span>, <span class="string">&quot;prettier&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>TSLint 和 Stylelint 如法炮制。具体可参看以下项目：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/prettier/tslint-config-prettier">tslint-config-prettier</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/prettier/stylelint-config-prettier">stylelint-config-prettier</a></li>
+</ul>
+<p><a name="NQrtP"></a></p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>如果你不喜欢 Prettier 将 HTML 、Vue 模板 或者 JSX 等的默认配置 “whitespace-sensitive”: “css” 格式化时把一对尖括号分为两行：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- input --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;dolorum atque aspernatur&quot;</span>&gt;</span>Est molestiae sunt facilis qui rem.<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;voluptatem architecto at&quot;</span>&gt;</span>Architecto rerum architecto incidunt sint.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- output --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;dolorum atque aspernatur&quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span>Est molestiae sunt facilis qui rem.&lt;/span</span><br><span class="line">&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;voluptatem architecto at&quot;</span>&gt;</span></span><br><span class="line">  Architecto rerum architecto incidunt sint.</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>可以配置 Prettier 的 whitespace-sensitive 选项为 ignore。</p>
+<p><a name="QSRGC"></a></p>
+<h2 id="相关网站"><a href="#相关网站" class="headerlink" title="相关网站"></a>相关网站</h2><hr>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6938687606687432740">https://juejin.cn/post/6938687606687432740</a><br /><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000012909159">https://segmentfault.com/a/1190000012909159</a><br /><a target="_blank" rel="noopener" href="https://www.cnblogs.com/fitzlovecode/p/code_formater.html">https://www.cnblogs.com/fitzlovecode/p/code_formater.html</a>  <br /><a target="_blank" rel="noopener" href="https://www.clloz.com/programming/front-end/js/2020/08/31/prettier-eslint/">https://www.clloz.com/programming/front-end/js/2020/08/31/prettier-eslint/</a><br /><a target="_blank" rel="noopener" href="https://www.prettier.cn/">Prettier中文网</a><br />[</p>
+<p>](<a target="_blank" rel="noopener" href="https://juejin.cn/post/6938687606687432740">https://juejin.cn/post/6938687606687432740</a>)</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://repository-images.githubusercontent.com/75104123/f6f27280-61e5-11e9-8759-33288e842a50" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/dushenyan-share-record-blog.github.io/2022/07/31/nvm/"><img class="prev-cover" src="https://pica.zhimg.com/v2-ea19a310320f2129e8f13617fe549cf9_1440w.jpg?source=172ae18b" onerror="onerror=null;src='/dushenyan-share-record-blog.github.io/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">nvm</div></div></a></div><div class="next-post pull-right"><a href="/dushenyan-share-record-blog.github.io/2022/07/31/vscode/"><img class="next-cover" src="https://agileviet.vn/content/images/2020/12/1_cn_XBD307E3lObHk511Qqg.png" onerror="onerror=null;src='/dushenyan-share-record-blog.github.io/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">vscode</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PRETTIER%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text">PRETTIER是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E6%8C%87%E5%BC%95"><span class="toc-number">3.</span> <span class="toc-text">官网指引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text">命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90"><span class="toc-number">7.</span> <span class="toc-text">集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E7%BC%96%E8%BE%91%E5%99%A8%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">7.1.</span> <span class="toc-text">利用编辑器插件进行格式化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E5%90%88%E5%85%B6%E5%AE%83%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">8.</span> <span class="toc-text">配合其它工具使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83"><span class="toc-number">9.</span> <span class="toc-text">其它</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99"><span class="toc-number">10.</span> <span class="toc-text">相关网站</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By dushenyan</div><div class="footer_custom_text">衣带渐宽终不悔 为伊消得人憔悴</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/dushenyan-share-record-blog.github.io/js/utils.js"></script><script src="/dushenyan-share-record-blog.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/dushenyan-share-record-blog.github.io/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

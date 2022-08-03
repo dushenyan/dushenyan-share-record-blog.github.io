@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Git | dushenyan’Blog</title><meta name="keywords" content="dushenyan blog  share record"><meta name="author" content="dushenyan,2645472474@qq.com"><meta name="copyright" content="dushenyan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="GIT是什么 自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。它的速度飞快，极其适合管理大项目 。Git 可以在 windows、Mac、Linux 全平台系统使用。 官网指引 中文官网： https:&#x2F;&#x2F;gitforwindows.org&#x2F;下载地址：https:&#x2F;&#x2F;git-scm.com&#x2F;downloads 安装 图像化软件 配置 配置文件为 ~&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="https://dbudaiya.github.io/2022/07/31/Git/index.html">
+<meta property="og:site_name" content="dushenyan’Blog">
+<meta property="og:description" content="GIT是什么 自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。它的速度飞快，极其适合管理大项目 。Git 可以在 windows、Mac、Linux 全平台系统使用。 官网指引 中文官网： https:&#x2F;&#x2F;gitforwindows.org&#x2F;下载地址：https:&#x2F;&#x2F;git-scm.com&#x2F;downloads 安装 图像化软件 配置 配置文件为 ~&amp;#">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/ChiRenhua/Resource/master/WebImage/Git/git_logo.png">
+<meta property="article:published_time" content="2022-07-31T14:54:50.000Z">
+<meta property="article:modified_time" content="2022-08-03T02:03:12.010Z">
+<meta property="article:author" content="dushenyan">
+<meta property="article:tag" content="dushenyan blog  share record">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ChiRenhua/Resource/master/WebImage/Git/git_logo.png"><link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/63347504"><link rel="canonical" href="https://dbudaiya.github.io/2022/07/31/Git/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/dushenyan-share-record-blog.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/dushenyan-share-record-blog.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"/dushenyan-share-record-blog.github.io/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Git',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-03 10:03:12'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/63347504" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/dushenyan-share-record-blog.github.io/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/dushenyan-share-record-blog.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/dushenyan-share-record-blog.github.io/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/ChiRenhua/Resource/master/WebImage/Git/git_logo.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/dushenyan-share-record-blog.github.io/">dushenyan’Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-31T14:54:50.000Z" title="发表于 2022-07-31 22:54:50">2022-07-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-03T02:03:12.010Z" title="更新于 2022-08-03 10:03:12">2022-08-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/dushenyan-share-record-blog.github.io/categories/%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7/">配置工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Git"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="GIT是什么"><a href="#GIT是什么" class="headerlink" title="GIT是什么"></a>GIT是什么</h2><hr>
+<p>自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。它的速度飞快，极其适合管理大项目 。<br />Git 可以在 windows、Mac、Linux 全平台系统使用。<br><a name="ffysq"></a></p>
+<h2 id="官网指引"><a href="#官网指引" class="headerlink" title="官网指引"></a>官网指引</h2><hr>
+<p>中文官网： <a target="_blank" rel="noopener" href="https://gitforwindows.org/">https://gitforwindows.org/</a><br />下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br><a name="w6Vtr"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><hr>
+<p>图像化软件<br><a name="UNukc"></a></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><hr>
+<p>配置文件为 ~&#x2F;.gitconfig ，执行任何 Git 配置命令后文件将自动创建。<br />第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="literal">--global</span> user.email <span class="string">&quot;2645472474@qq.com&quot;</span></span><br><span class="line">git config <span class="literal">--global</span> user.name <span class="string">&quot;dushenyan&quot;</span></span><br></pre></td></tr></table></figure>
+<p><a name="retlo"></a></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><hr>
+<p>工作流</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建文件</span></span><br><span class="line">touch a.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化新仓库 </span></span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 克隆代码 </span></span><br><span class="line">git clone https://gitee.com/houdunwang/hdcms.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 克隆指定分支 </span></span><br><span class="line">git clone <span class="literal">-b</span> dev git@gitee.com:houdunwang/hdcms.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交单个文件 </span></span><br><span class="line">git add index.php</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交所有文件</span></span><br><span class="line">git add <span class="literal">-A</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用通配符提交 </span></span><br><span class="line">git add *.js</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到仓库中 </span></span><br><span class="line">git commit <span class="literal">-m</span> <span class="string">&#x27;提示信息&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交已经跟踪过的文件，不需要执行</span></span><br><span class="line"></span><br><span class="line">add git commit <span class="literal">-a</span> <span class="literal">-m</span> <span class="string">&#x27;提交信息&#x27;</span></span><br><span class="line"><span class="comment"># 删除版本库与项目目录中的文件 </span></span><br><span class="line">git <span class="built_in">rm</span> index.php</span><br><span class="line"></span><br><span class="line"><span class="comment"># 只删除版本库中文件但保存项目目录中文件</span></span><br><span class="line">git <span class="built_in">rm</span> <span class="literal">--cached</span> index.php</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果有删除错了的文件hd.js 可输入下列命令</span></span><br><span class="line">git checkout hd.js</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改最后一次提交 </span></span><br><span class="line">git commit <span class="literal">--amend</span></span><br></pre></td></tr></table></figure>
+<p><a name="UmcR5"></a></p>
+<h2 id="分支流程"><a href="#分支流程" class="headerlink" title="分支流程"></a>分支流程</h2><hr>
+<p>大部分情况下不会直接在 master 分支工作，我们应该保护这个分支是最终开发完成代码健康可交付运行的。<br />所以功能和缺陷(bug)修复都会新建分支完成，除了这个概念外与基本流程使用是一样的。</p>
+<ol>
+<li><p><strong>新建支付功能开发分支</strong></p>
+<blockquote>
+<p>git branch pay</p>
+</blockquote>
+</li>
+<li><p><strong>切换到新分支开始开发，这里的工作内容与上面的基础流程是一样的</strong></p>
+<blockquote>
+<p>git checkout pay</p>
+</blockquote>
+</li>
+<li><p>**开发完成执行提交 **</p>
+<blockquote>
+<p>git commit -m ‘H5 支付功能’</p>
+</blockquote>
+</li>
+<li><p><strong>合并分支到 master</strong></p>
+<blockquote>
+<p>切换到master分支<br />git checkout master</p>
+</blockquote>
+</li>
+</ol>
+<p>合并pay分支的代码<br />git merge pay</p>
+<ol start="5">
+<li><strong>提交代码到 master 远程分支</strong><blockquote>
+<p>git push</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="xs4Qg"></a></p>
+<h2 id="基本管理"><a href="#基本管理" class="headerlink" title="基本管理"></a>基本管理</h2><hr>
+<p><a name="wNQt3"></a></p>
+<h3 id="工作区管理"><a href="#工作区管理" class="headerlink" title="工作区管理"></a>工作区管理</h3><p>git clean 命令用来从工作目录中删除所有没有跟踪（tracked）过的文件</p>
+<ol>
+<li>git clean -n是一次 clean 的演习, 告诉你哪些文件会被删除</li>
+<li>git clean -f删除当前目录下没有 tracked 过的文件，不会删除.gitignore 指定的文件</li>
+<li>git clean -df删除当前目录下没有被 tracked 过的文件和文件夹<br><a name="lHYYL"></a></li>
+</ol>
+<h3 id="暂存区管理"><a href="#暂存区管理" class="headerlink" title="暂存区管理"></a>暂存区管理</h3><ol>
+<li>提交所有修改和新增的文件 git add .</li>
+<li>只提交修改文件不提交新文件 git add -u</li>
+<li>放弃没有提交的所有修改 git checkout .</li>
+<li>放弃指定文件的修改 git checkout hd.js</li>
+<li>查看暂存区文件列表 git ls-files -s</li>
+<li>查看暂存区文件内容 git cat-file -p 6e9a94<br><a name="rcBqJ"></a></li>
+</ol>
+<h3 id="版本库管理"><a href="#版本库管理" class="headerlink" title="版本库管理"></a>版本库管理</h3><p>使用 reset 恢复到历史提交点，重置暂存区与工作目录的内容。</p>
+<ol>
+<li>清空工作区和暂存区的改动 git reset –hard</li>
+<li>恢复前三个版本 git reset –hard HEAD^^^</li>
+<li>保留工作区的内容，把文件差异放进暂存区 git reset –soft</li>
+<li>恢复到指定提交版本（先通过 git log 查看版本号) git reset –hard b7b73147ca8d6fc20e451d7b36<br><a name="ms94p"></a></li>
+</ol>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>分支用于为项目增加新功能或修复 Bug 时使用。</p>
+<ol>
+<li><p>创建分支 git branch dev</p>
+</li>
+<li><p>查看分支 git branch</p>
+</li>
+<li><p>切换分支 git checkout dev</p>
+</li>
+<li><p>创建并切换分支 git checkout -b feature&#x2F;bbs</p>
+</li>
+<li><p>合并 dev 分支到 master</p>
+<blockquote>
+<p>git checkout master<br />git merge dev</p>
+</blockquote>
+</li>
+<li><p>删除分支 git branch -d dev</p>
+</li>
+<li><p>删除没有合并的分支git branch -D dev</p>
+</li>
+<li><p>删除远程分支 git push origin :dev</p>
+</li>
+<li><p>查看未合并的分支(切换到 master) git branch –no-merged</p>
+</li>
+<li><p>查看已经合并的分支(切换到 master) git branch –merged<br><a name="n1KDP"></a></p>
+</li>
+</ol>
+<h3 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h3><p>Git 也可以对某一时间点上的版本打上标签 ，用于发布软件版本如 v1.0</p>
+<ol>
+<li>添加标签 git tag v1.0</li>
+<li>列出标签 git tag</li>
+<li>推送标签 git push –tags</li>
+<li>删除标签 git tag -d v1.0.1</li>
+<li>删除远程标签 git push origin :v1.0.1<br><a name="WW6hq"></a></li>
+</ol>
+<h3 id="日志查看"><a href="#日志查看" class="headerlink" title="日志查看"></a>日志查看</h3><ol>
+<li>查看日志 git log</li>
+<li>查看最近 2 次提交日志并显示文件差异 git log -p -2</li>
+<li>显示已修改的文件清单 git log –name-only</li>
+<li>显示新增、修改、删除的文件清单 git log –name-status</li>
+<li>一行显示并只显示 SHA-1 的前几个字符 git log –oneline<br><a name="Iiri4"></a></li>
+</ol>
+<h2 id="效率提升"><a href="#效率提升" class="headerlink" title="效率提升"></a>效率提升</h2><hr>
+<p><a name="roYPX"></a></p>
+<h3 id="定义别名"><a href="#定义别名" class="headerlink" title="定义别名"></a>定义别名</h3><p>通过创建命令别名可以减少命令输入量，有几种方式进行设置</p>
+<ol>
+<li><strong>配置文件定义</strong></li>
+</ol>
+<p>修改配置文件 ~&#x2F;.gitconfig 并添加以下命令别名配置段</p>
+<blockquote>
+<p>[alias]<br />	a &#x3D; add .<br />	c &#x3D; commit<br />	s &#x3D; status<br />	l &#x3D; log<br />	b &#x3D; branch</p>
+</blockquote>
+<p>现在可以使用 git a 实现 git add . 一样的效果了。</p>
+<ol start="2">
+<li><strong>系统配置定义</strong></li>
+</ol>
+<p>window 用户可以修改~&#x2F;.bashrc 或 ~&#x2F;.bash_profile文件。<br />mac&#x2F;linux 修改 ~&#x2F;.zshrc 文件中定义常用的别名指令，需要首先安装 zsh 命令行扩展</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">alias gs=<span class="string">&quot;git status&quot;</span></span><br><span class="line">alias gc=<span class="string">&quot;git commit -m &quot;</span></span><br><span class="line">alias gl=<span class="string">&quot;git log --graph --pretty=format:&#x27;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#x27; --abbrev-commit  &quot;</span></span><br><span class="line">alias gb=<span class="string">&quot;git branch&quot;</span></span><br><span class="line">alias ga=<span class="string">&quot;git add .&quot;</span></span><br><span class="line">alias go=<span class="string">&quot;git checkout&quot;</span></span><br></pre></td></tr></table></figure>
+<p>命令行直接使用 gs 即可以实现 git status 一样的效果了。<br />window 系统需要使用 git for window 中的 Git Base 软件<br><a name="a65WB"></a></p>
+<h3 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h3><p>.gitignore 用于定义忽略提交的文件</p>
+<ul>
+<li>所有空行或者以注释符号 ＃ 开头的行都会被 Git 忽略。</li>
+<li>匹配模式最后跟反斜杠（&#x2F;）说明要忽略的是目录。</li>
+<li>可以使用标准的 glob 模式匹配。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.<span class="property">idea</span></span><br><span class="line">/vendor</span><br><span class="line">.<span class="property">env</span></span><br><span class="line">/node_modules</span><br><span class="line">/public/storage</span><br><span class="line">*.<span class="property">txt</span></span><br></pre></td></tr></table></figure>
+<a name="cNnLy"></a></li>
+</ul>
+<h3 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h3><p>不同分修改同一个文件或不同开发者修改同一个分支文件都可能造成冲突，造成无法提交代码。</p>
+<ol>
+<li>使用编辑器修改冲突的文件</li>
+<li>添加暂存 git add . 表示已经解决冲突</li>
+<li>git commit 提交完成<br><a name="oPHbm"></a></li>
+</ol>
+<h3 id="Stashing"><a href="#Stashing" class="headerlink" title="Stashing"></a>Stashing</h3><p>当你正在进行项目中某一部分的工作，里面的东西处于一个比较杂乱的状态，而你想转到其他分支上进行一些工作。问题是，你不想提交进行了一半的工作，否则以后你无法回到这个工作点。<br />“暂存” 可以获取你工作目录的中间状态——也就是你修改过的被追踪的文件和暂存的变更——并将它保存到一个未完结变更的堆栈中，随时可以重新应用。</p>
+<ol>
+<li>储藏工作 git stash</li>
+<li>查看储藏列表 git stash list</li>
+<li>应用最近的储藏 git stash apply</li>
+<li>应用更早的储藏 git stash apply stash@{2}</li>
+<li>删除储藏git stash drop stash@{0}</li>
+<li>应用并删除储藏 git stash pop<br><a name="TEVxr"></a></li>
+</ol>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>下面是最热的Github进行讲解，使用码云、codeing 等国内仓库使用方式一致，就不在赘述了。<br><a name="QDnj5"></a></p>
+<h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><ul>
+<li><strong>生成秘钥</strong></li>
+</ul>
+<p>使用 ssh 连接 Github 发送指令更加安全可靠，也可以免掉每次输入密码的困扰。查看本机密钥：</p>
+<blockquote>
+<p>ssh-keygen -t rsa</p>
+</blockquote>
+<p>一直按回车键直到结束。系统会在~&#x2F;.ssh 目录中生成 id_rsa和id_rsa.pub，即密钥id_rsa和公钥id_rsa.pub。</p>
+<ul>
+<li><strong>向 GitHub 添加秘钥</strong></li>
+</ul>
+<p>点击 New SSH key 按钮，添加上面生成的 id_rsa.pub 公钥内容。<br><a name="OiLDT"></a></p>
+<h3 id="关联远程"><a href="#关联远程" class="headerlink" title="关联远程"></a>关联远程</h3><ol>
+<li><p>创建本地库并完成初始提交</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;# hd-xj&quot;</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit <span class="literal">-m</span> <span class="string">&quot;first commit&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加远程仓库</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:houdunwang/hd<span class="literal">-xj</span>.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看远程库</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="literal">-v</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>推送数据到远程仓库</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push <span class="literal">-u</span> origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除远程仓库关联</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="built_in">rm</span> origin</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>通过 clone 克隆的仓库，本地与远程已经自动关联，上面几步都可以省略。<br><a name="wv00K"></a></p>
+<h3 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h3><p>拉取远程主机某个分支的更新，再与本地的指定分支合并。</p>
+<ol>
+<li>拉取 origin 主机的 ask 分支与本地的 master 分支合并 git pull origin ask:ask</li>
+<li>拉取 origin 主机的 ask 分支与当前分支合并 git pull origin ask</li>
+<li>如果远程分支与当前本地分支同名直接执行 git pull<br><a name="ZsmAp"></a></li>
+</ol>
+<h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3><p>git push命令用于将本地分支的更新，推送到远程主机。它的格式与git pull命令相似。</p>
+<ol>
+<li><p>将当前分支推送到origin主机的对应分支(如果当前分支只有一个追踪分支 ，可省略主机名)</p>
+<blockquote>
+<p>git push origin</p>
+</blockquote>
+</li>
+<li><p>使用-u选项指定一个默认主机 ,这样以后就可以不加任何参数直播使用git push。</p>
+<blockquote>
+<p>git push -u origin master</p>
+</blockquote>
+</li>
+<li><p>删除远程ask分支 </p>
+<blockquote>
+<p>git push origin –delete ask</p>
+</blockquote>
+</li>
+<li><p>本地 ask 分支关联远程分支并推送 </p>
+<blockquote>
+<p>git push –set-upstream origin ask</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="umFfO"></a></p>
+<h3 id="多库提交"><a href="#多库提交" class="headerlink" title="多库提交"></a>多库提交</h3><p>我可以将代码提交到多个远程版本库中，比如后盾人的 <a target="_blank" rel="noopener" href="https://gitee.com/houdunren/code">课程代码</a> 就提交到了 Github 与 Gitee 两个库中。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 增加一个远程库</span></span><br><span class="line">git remote add github git@github.com:houdunwang/coding.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到远程库</span></span><br><span class="line">git push github</span><br></pre></td></tr></table></figure>
+<p>也可以创建命令一次提交到两个库(注：参考上面的命令设置章节)</p>
+<blockquote>
+<p>alias gp&#x3D;”git push &amp; git push github”</p>
+</blockquote>
+<p>补充。。。 多库提交 别名 安装 工作原理  服务器架设</p>
+<hr>
+<p>相关网站<br /><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496">https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496</a><br /><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-tutorial.html">https://www.runoob.com/git/git-tutorial.html</a><br /><a target="_blank" rel="noopener" href="https://www.cnblogs.com/imyalost/p/8762522.html">https://www.cnblogs.com/imyalost/p/8762522.html</a><br /><a target="_blank" rel="noopener" href="https://blog.csdn.net/adasdvvv/article/details/121299834">https://blog.csdn.net/adasdvvv/article/details/121299834</a><br /><a target="_blank" rel="noopener" href="https://www.cnblogs.com/my-freedom/p/5701427.html">https://www.cnblogs.com/my-freedom/p/5701427.html</a><br />[</p>
+<p>](<a target="_blank" rel="noopener" href="https://www.cnblogs.com/my-freedom/p/5701427.html">https://www.cnblogs.com/my-freedom/p/5701427.html</a>)</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/ChiRenhua/Resource/master/WebImage/Git/git_logo.png" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/dushenyan-share-record-blog.github.io/2022/08/02/apipost/"><img class="prev-cover" src="https://www.wenjiangs.com/wp-content/uploads/2022/05/apipost.png" onerror="onerror=null;src='/dushenyan-share-record-blog.github.io/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">apipost</div></div></a></div><div class="next-post pull-right"><a href="/dushenyan-share-record-blog.github.io/2022/07/31/editconfig/"><img class="next-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTL1s6R87D-Ez4SYTOCTNBdROUhQcLZZvB4g&amp;usqp=CAU" onerror="onerror=null;src='/dushenyan-share-record-blog.github.io/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">editconfig</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GIT%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text">GIT是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E6%8C%87%E5%BC%95"><span class="toc-number">2.</span> <span class="toc-text">官网指引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">4.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E6%B5%81%E7%A8%8B"><span class="toc-number">6.</span> <span class="toc-text">分支流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%AE%A1%E7%90%86"><span class="toc-number">7.</span> <span class="toc-text">基本管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%AE%A1%E7%90%86"><span class="toc-number">7.1.</span> <span class="toc-text">工作区管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9A%82%E5%AD%98%E5%8C%BA%E7%AE%A1%E7%90%86"><span class="toc-number">7.2.</span> <span class="toc-text">暂存区管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%BA%93%E7%AE%A1%E7%90%86"><span class="toc-number">7.3.</span> <span class="toc-text">版本库管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="toc-number">7.4.</span> <span class="toc-text">分支管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tag"><span class="toc-number">7.5.</span> <span class="toc-text">Tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E6%9F%A5%E7%9C%8B"><span class="toc-number">7.6.</span> <span class="toc-text">日志查看</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87"><span class="toc-number">8.</span> <span class="toc-text">效率提升</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E5%88%AB%E5%90%8D"><span class="toc-number">8.1.</span> <span class="toc-text">定义别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gitignore"><span class="toc-number">8.2.</span> <span class="toc-text">.gitignore</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3"><span class="toc-number">8.3.</span> <span class="toc-text">冲突解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stashing"><span class="toc-number">8.4.</span> <span class="toc-text">Stashing</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">9.</span> <span class="toc-text">远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH"><span class="toc-number">9.1.</span> <span class="toc-text">SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B"><span class="toc-number">9.2.</span> <span class="toc-text">关联远程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pull"><span class="toc-number">9.3.</span> <span class="toc-text">pull</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#push"><span class="toc-number">9.4.</span> <span class="toc-text">push</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%BA%93%E6%8F%90%E4%BA%A4"><span class="toc-number">9.5.</span> <span class="toc-text">多库提交</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By dushenyan</div><div class="footer_custom_text">衣带渐宽终不悔 为伊消得人憔悴</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/dushenyan-share-record-blog.github.io/js/utils.js"></script><script src="/dushenyan-share-record-blog.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/dushenyan-share-record-blog.github.io/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
