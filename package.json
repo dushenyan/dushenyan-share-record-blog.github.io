@@ -18,6 +18,11 @@
   "hexo": {
     "version": "6.2.0"
   },
+  "homepage": "https://dbudaiya.github.io/dushenyan-share-record-blog.github.io/",
+  "repository": {
+    "url":"https://github.com/dbudaiya/dushenyan-share-record-blog.github.io",
+    "type": "git"
+  },
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=6.0.0"

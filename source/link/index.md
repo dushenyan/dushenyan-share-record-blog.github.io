@@ -8,14 +8,10 @@ top_img: 'https://pic1.zhimg.com/v2-6d2045f620b3f90eb224a53c832181b4_b.jpg'
 ### Vue系列
 ---
 
-[Vue I18n](https://kazupon.github.io/vue-i18n/zh/)
 [起步 | Vue Loader](https://vue-loader.vuejs.org/zh/guide/#vue-cli)
 [BetterScroll 2.0](https://better-scroll.github.io/docs/zh-CN/)
 [BootstrapVue-基于VueJS的Bootstrap框架 · 全球最流行的 HTML、CSS 和 JS 工具库。](https://code.z01.com/bootstrap-vue/)
-[资源 | Element](https://element.eleme.io/#/zh-CN/resource)
 [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/)
-[Ant Design of Vue - Ant Design Vue](https://www.antdv.com/docs/vue/introduce-cn/)
-[Vant - 轻量、可靠的移动端组件库](https://vant-contrib.gitee.io/vant/#/zh-CN/)
 [Nuxt.js - Vue.js 通用应用框架 | Nuxt.js 中文网](https://www.nuxtjs.cn/)
 [开源免费比较好看的后台管理系统 - SegmentFault 思否](https://segmentfault.com/a/1190000039654929)
 [20 个值得学习的 Vue 开源项目 - 云+社区 - 腾讯云](https://cloud.tencent.com/developer/article/1666213)
@@ -23,9 +19,6 @@ top_img: 'https://pic1.zhimg.com/v2-6d2045f620b3f90eb224a53c832181b4_b.jpg'
 [15.Vue技术栈开发实战-响应式布局 - GASA - 博客园](https://www.cnblogs.com/wangjunwei/p/13245319.html)
 [vue-strap-基于 Vue.js 的 Bootstrap 组件_笔点网址导航](https://www.bidianer.com/site/4919)
 [Home | Vue Devtools](https://devtools.vuejs.org/)
-[Vue.js](https://cn.vuejs.org/)
-[Vuex 是什么？ | Vuex](https://vuex.vuejs.org/zh/)
-[Vue Router](https://router.vuejs.org/zh/)
 [API 手册 | Vue 组合式 API](https://vue3js.cn/vue-composition-api/)
 
 ## Vue3系列
@@ -95,7 +88,7 @@ top_img: 'https://pic1.zhimg.com/v2-6d2045f620b3f90eb224a53c832181b4_b.jpg'
 [Bootstrap中文网](https://www.bootcss.com/)
 [印记中文 - 深入挖掘国外前端新领域，为中国 Web 前端开发人员提供优质文档！](https://docschina.org/)
 [博客园 - 开发者的网上家园](https://www.cnblogs.com/)
-[V2EX](https://www.v2ex.com/?__cf_chl_jschl_tk__=9edbd593ad57ac9fc0af49d166ae1cfe0ecaf3c7-1599660694-0-AdlPjx-cyrwnWZi7Yfkn4y-75rqof7b2eY9aY_j33xhSDx9iE_sbQ_NLLQg7msNRUUD9TodWqdW6uMKnvSbmrLsUb5Wf1CQ8twgeK61xg7dI8yjsOUFtfQ4waTQBj8yteXLomiBz52CKROoA2XfahdWjkSvZt84N6QTHskPzdzTh_66aP-DHGYzkqCYNgpFJXimZv7TIFkGfbmlD_xHKYw9KWs83EFCrP56gcaocaAZ1bnlvHZ6aRmgorKaeoG7COzNMSpJgmvGwx3noJG-8vqWt8F44poWcdfNH-s7OuQtk8DZk3jtc8tMj1nk0C7Me0pWbstnKhW2chJcOmnGVMhk)
+[V2EX](https://www.v2ex.com)
 [Helloweba - WEB技术分享](https://www.helloweba.net/)
 [F2EX _ web前端资源库](https://f2ex.cn/)
 [Document](http://www.macrozheng.com/#/)
@@ -283,11 +276,7 @@ top_img: 'https://pic1.zhimg.com/v2-6d2045f620b3f90eb224a53c832181b4_b.jpg'
 [CSS参考手册_web前端开发参考手册系列](http://css.doyoe.com/)
 [layout Archives | CSS-Tricks](https://css-tricks.com/tag/layout/)
 [Font Awesome，一套绝佳的图标字体库和CSS框架](https://fontawesome.dashgame.com/#top)
-[Animate中文网 – Animate安装、Animate使用、Animate下载](http://www.animate.net.cn/)
 [Emmet快速定义html结构文档](https://docs.emmet.io/abbreviations/)
-[Bootstrap v5 中文文档 · Bootstrap 是全球最受欢迎的 HTML、CSS 和 JS 前端工具库。 | Bootstrap 中文网](https://v5.bootcss.com/)
-[Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.](https://tailwindcss.com/)
-[Tailwind CSS 中文文档 - 无需离开您的HTML，即可快速建立现代网站。](https://www.tailwindcss.cn/)
 
 ## 阮大神
 
@@ -297,7 +286,6 @@ top_img: 'https://pic1.zhimg.com/v2-6d2045f620b3f90eb224a53c832181b4_b.jpg'
 [Ramda 函数库参考教程 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2017/03/ramda.html)
 [ES6 入门教程 - ECMAScript 6入门](https://es6.ruanyifeng.com/)
 [JavaScript 教程 - 网道](https://wangdoc.com/javascript/index.html)
-[Deno 运行时入门教程：Node.js 的替代品 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2020/01/deno-intro.html)
 [首页 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/)
 [JavaScript Promise迷你书（中文版）](http://liubin.org/promises-book/)
 
@@ -311,14 +299,6 @@ top_img: 'https://pic1.zhimg.com/v2-6d2045f620b3f90eb224a53c832181b4_b.jpg'
 [TypeScript 入门教程](https://ts.xcatliu.com/)
 [https://mp.weixin.qq.com/s/VeepNN2518QASUmYoBWDqw](https://mp.weixin.qq.com/s/VeepNN2518QASUmYoBWDqw)
 
-## link
-
----
-
-[Vue2的生命周期_Cheers丶的博客-CSDN博客_vue2生命周期](https://blog.csdn.net/weixin_45112409/article/details/108596812)
-[神器强推！再也不用求后端给接口了...](https://mp.weixin.qq.com/s/laHbofn-fO19Zh1SCyscaA)
-[newword](https://base.memfiredb.com/c6lfv372pma0p27e7jg0/table)
-[30个前端开发人员的救生工具「干货」](https://segmentfault.com/a/1190000039695155)
 
 ## 优化
 
