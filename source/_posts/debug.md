@@ -2,6 +2,7 @@
 title: vscode多端调试
 date: 2022-08-05 10:50:46
 categories: vscode
+cover: https://picx.zhimg.com/v2-9bc3b2159fc83f3c8146f4c215336962_r.jpg?source=1940ef5c
 ---
 
 ## 目录结构
