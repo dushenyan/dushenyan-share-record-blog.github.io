@@ -89,7 +89,8 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://pica.zhimg.com/80/v2-e5427c1e9ad8aaad99d643e7bd7e927b_1440w.jpg?source=1940ef5c
+# index_img: https://pica.zhimg.com/80/v2-e5427c1e9ad8aaad99d643e7bd7e927b_1440w.jpg?source=1940ef5c
+index_img: /img/haikou-yeshu-image.jpeg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
