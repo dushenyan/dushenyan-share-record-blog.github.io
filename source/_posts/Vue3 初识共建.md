@@ -117,12 +117,10 @@ MDN知识传送:
 坑点与解决
 
 - 尽量不要与vue2.x混用
-  - 如果有重名,Setup优先
+  - 如果有重名，setup优先
   - Vue2.x中配置(data,methods,computed等...)中可以访问到setup中的属性以及方法
   - 在setup中不能访问到Vue2.x中的属性以及方法
-- Setup不能是一个async函数,因为返回不是对象而是Promise对象,模板中看不清其中返回的对象.(可用awite 解析返回正常对象)
-
-
+- Setup不能是一个async函数，因为返回不是对象而是Promise对象，模板中看不清其中返回的对象。(可用awite 解析返回正常对象)
 
 ### Ref函数
 
@@ -216,11 +214,225 @@ console.log("PageInfo", PageInfo);
   - ref定义数据： 操作数据需要.value去读取，模板中不需要
   - reactive定义数据：操作数据与读取数据都不需要.value
 
+### computed 计算属性
+
+与方法函数的区别
+
+- 缓存
+- 效率
+
+ ```vue
+ <template>
+   <h4>{{ MovieAll }}</h4>
+   电影名称: <input type="text" v-model="MovieInfo.name" />
+   <br />
+   上映时间: <input type="number" v-model="MovieInfo.time" />
+ </template>
+ 
+ <script setup lang="ts" name="Abb">
+ const MovieInfo = reactive({
+   name: "隐入凡尘",
+   time: 2020,
+ });
+ 
+ // 简便写法 读取返回数据
+ const MovieAll = computed(() => {
+   return MovieInfo.name + " - " + MovieInfo.time;
+ });
+ </script>
+ ```
+
+```vue
+<template>
+  <h4>{{ MovieAll }}</h4>
+  电影名称: <input v-model="MovieInfo.name" />
+  <br />
+  上映时间: <input v-model="MovieInfo.time" />
+  <br />
+  修正: <input v-model="MovieAll" />
+</template>
+
+<script setup lang="ts" name="Abb">
+const MovieInfo = reactive({
+  name: "隐入凡尘",
+  time: "2020",
+});
+
+// 完整写法 读取修改数据
+const MovieAll = computed({
+  get() {
+    return MovieInfo.name + " - " + MovieInfo.time;
+  },
+  set(n: string) {
+    let nl = n.split("-");
+    console.log("nl", nl);
+
+    MovieInfo.name = nl[0];
+    MovieInfo.time = nl[1];
+  },
+});
+</script>
+```
+
+### watch 监视属性
+
+- 与Vue2.x中watch配置功能一般
+- 踩坑
+  - 监视reactive响应式数据时候: oldValue无法正确获取,强制开启deep深度监视失效
+  - 监视reactive响应式数据中某个属性: deep配置有效
+
+```vue
+<script>
+// 数据模板
+let numRef = ref(0)
+</script>
+```
+
+操作数据:
+
+```vue
+
+```
 
 
 
+### toRef函数
 
+- 创建ref对象，其value值指向另一对象中的某个属性
+- 将响应式对象中某个属性单独提供给外部使用
+- toRef和toRefs功能一致，后者可以创建多个ref对象
 
+```vue
+<template>
+  <h4>{{ name }}</h4>
+</template>
+
+<script setup lang="ts" name="Abb">
+const MovieInfo = reactive({
+  name: "隐入凡尘",
+  time: "2020",
+});
+  
+// toRef函数
+const name = toRef(MovieInfo, "name");
+
+// 注意点: 使用ref去取name值是,不会去修改MovieInfo值,而是初始化返回新值
+
+// toRefs函数
+const { name, time } = toRefs(MovieInfo);
+</script>
+```
+
+## 扩展Composition API
+
+> shallow 翻译: 浅的
+
+### shallowReactive 与shallowRef 函数
+
+- shallwRef：只处理基本数据类型的响应式，不进行对象响应式处理
+
+- shallowReactive：只处理对象最外层属性的响应式（浅响应）
+
+- 什么时候用？
+
+  - 如果一个对象数据，结构比较深，但只需要变化外出属性 ==> shallowReactive
+
+  - 如果一个对象数据，后续功能不会修改改对象中属性，而是新生的对象来替换  ==> shallowRef
+
+    - ```vue
+      <template>
+        <h4>{{ MovieInfo.name }}</h4>
+        <el-button @click="changeMovieName">点击</el-button>
+      </template>
+      
+      <script setup lang="ts" name="Abb">
+      const MovieInfo = shallowRef({
+        name: "隐入凡尘",
+      });
+      
+      // 不可行
+      // const changeMovieName = function () {
+      //   MovieInfo.value.name = "机器人总动员";
+      // };
+      
+      // 将响应式对象MovieInfo数据进行修改
+      const changeMovieName = function () {
+        MovieInfo.value = { name: "机器人总动员" };
+      };
+      </script>
+      ```
+
+### readonly与shallowReadonly函数
+
+- readonly：让一个响应式数据内部全部变为只读（深只读）
+
+- shallowReadonly：让一个响应式数据变为只读（浅只读）
+- 应用场景： 不希望数据被修改，且改后有警告
+
+```vue
+<template>
+  <h4>{{ MovieInfo.name }}</h4>
+  <el-button @click="changeMovieName">点击</el-button>
+</template>
+
+<script setup lang="ts" name="Abb">
+// =============ref====================
+let MovieInfo = ref({
+  name: "隐入凡尘",
+  time: "2020",
+});
+
+// 深层次数据为只读 修改警告
+// MovieInfo = readonly(MovieInfo);
+
+// 只考虑最外层数据为只读 修改成功
+MovieInfo = shallowReadonly(MovieInfo);
+console.log("MovieInfo", MovieInfo);
+
+const changeMovieName = function () {
+  MovieInfo.value.name = "机器人总动员";
+};
+
+// =============reactive====================
+let MovieInfo1 = reactive({
+  name: "隐入凡尘",
+  time: "2020",
+  look: {
+    person: 18,
+  },
+});
+
+// 深层次数据为只读 警告
+// MovieInfo1 = readonly(MovieInfo1);
+
+// 只考虑最外层数据为只读 成功
+MovieInfo1 = shallowReadonly(MovieInfo1);
+console.log("MovieInfo1", MovieInfo1);
+
+const changeMovieName1 = function () {
+  MovieInfo1.look.person = 18;
+};
+</script>
+```
+
+### toRaw与markRaw函数
+
+- toRaw函数
+  - 作用：将一个由reactive生成的响应式对象转变为**普通对象**
+  - 使用场景：用于读取响应式对象对应的普通对象,对这个普通对象的所有操作都不会引起页面更新
+- markRaw
+  - 作用：标记一个对象，使其永远不会在成为响应式对象
+  - 使用场景
+    - 有些值不应该为响应式，例如第三方类库
+    - 当渲染具有不可变数据源的大列表，跳过响应式转换提高性能
+
+### customRef函数
+
+- 作用：创建一个自定义ref，并且对其依赖项跟终和更新触发进行显式控制
+
+## 起始组件
+
+### Transform组件
 
 
 
