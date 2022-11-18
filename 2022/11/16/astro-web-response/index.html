@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>astro-web-response | dushenyan’Blog</title><meta name="keywords" content="dushenyan blog  share record"><meta name="author" content="dushenyan,2645472474@qq.com"><meta name="copyright" content="dushenyan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="AstroAstro是什么？ 以内容为中心 ：Astro 专为内容丰富的网站而设计。 服务器优先 ：网站在服务器上渲染 HTML 时运行速度更快。 默认快速 ：在 Astro 中构建缓慢的网站是不可能的。 易于使用 ：您不需要成为专家即可使用 Astro 构建某些内容且文档可读性高 功能齐全且灵活 ：超100多种 Astro 集成可供选择。  多页面框架 HTML&#x2F;CSS 优先快速渲染占">
+<meta property="og:type" content="article">
+<meta property="og:title" content="astro-web-response">
+<meta property="og:url" content="https://dbudaiya.github.io/2022/11/16/astro-web-response/index.html">
+<meta property="og:site_name" content="dushenyan’Blog">
+<meta property="og:description" content="AstroAstro是什么？ 以内容为中心 ：Astro 专为内容丰富的网站而设计。 服务器优先 ：网站在服务器上渲染 HTML 时运行速度更快。 默认快速 ：在 Astro 中构建缓慢的网站是不可能的。 易于使用 ：您不需要成为专家即可使用 Astro 构建某些内容且文档可读性高 功能齐全且灵活 ：超100多种 Astro 集成可供选择。  多页面框架 HTML&#x2F;CSS 优先快速渲染占">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/withastro/astro/main/assets/social/banner-minimal.png">
+<meta property="article:published_time" content="2022-11-16T11:28:38.000Z">
+<meta property="article:modified_time" content="2022-11-18T07:41:42.510Z">
+<meta property="article:author" content="dushenyan">
+<meta property="article:tag" content="dushenyan blog  share record">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/withastro/astro/main/assets/social/banner-minimal.png"><link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/63347504"><link rel="canonical" href="https://dbudaiya.github.io/2022/11/16/astro-web-response/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/dushenyan-share-record-blog.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/dushenyan-share-record-blog.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"/dushenyan-share-record-blog.github.io/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'astro-web-response',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-18 15:41:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/63347504" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/dushenyan-share-record-blog.github.io/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/dushenyan-share-record-blog.github.io/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/dushenyan-share-record-blog.github.io/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/withastro/astro/main/assets/social/banner-minimal.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/dushenyan-share-record-blog.github.io/">dushenyan’Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/dushenyan-share-record-blog.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">astro-web-response</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-16T11:28:38.000Z" title="发表于 2022-11-16 19:28:38">2022-11-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-18T07:41:42.510Z" title="更新于 2022-11-18 15:41:42">2022-11-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="astro-web-response"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Astro"><a href="#Astro" class="headerlink" title="Astro"></a>Astro</h1><h2 id="Astro是什么？"><a href="#Astro是什么？" class="headerlink" title="Astro是什么？"></a>Astro是什么？</h2><ul>
+<li>以内容为中心 ：Astro 专为内容丰富的网站而设计。</li>
+<li>服务器优先 ：网站在服务器上渲染 HTML 时运行速度更快。</li>
+<li>默认快速 ：在 Astro 中构建缓慢的网站是不可能的。</li>
+<li>易于使用 ：您不需要成为专家即可使用 Astro 构建某些内容且文档可读性高</li>
+<li>功能齐全且灵活 ：超100多种 Astro 集成可供选择。</li>
+</ul>
+<h4 id="多页面框架"><a href="#多页面框架" class="headerlink" title="多页面框架"></a>多页面框架</h4><ul>
+<li>HTML&#x2F;CSS 优先快速渲染占据</li>
+<li>自创 astro 单文件，支持多种文件页面文件</li>
+<li>支持各种前端组件（使用时要注意，可能与想象的有所区别，最后有 node ssr 渲染经验）</li>
+</ul>
+<h4 id="适合场景（主静态-x2F-少交互）"><a href="#适合场景（主静态-x2F-少交互）" class="headerlink" title="适合场景（主静态&#x2F;少交互）"></a>适合场景（主静态&#x2F;少交互）</h4><ul>
+<li>博客</li>
+<li>文档</li>
+<li>其他的静态页面</li>
+<li>其他交互不强的追求速度的页面</li>
+</ul>
+<blockquote>
+<p>前端用 astro 静态渲染</p>
+<p>后台管理用 使用 React&#x2F;Vue&#x2F;…</p>
+<p>后端使用 （express&#x2F;nestjs&#x2F;koa…）</p>
+</blockquote>
+<h2 id="开发前奏"><a href="#开发前奏" class="headerlink" title="开发前奏"></a>开发前奏</h2><ul>
+<li>VScode安装Astro推出的插件<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode">Astro</a></li>
+<li>了解部分JavaScript开放API以及TypeScript类型检测</li>
+<li>了解vue基础知识包含组件常用响应式API(因为后续会将进行Vue插件引入)</li>
+<li>Nodejs14.x版本以上</li>
+</ul>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>准备工作</p>
+<p>安装VS插件</p>
+<ul>
+<li>本地安装</li>
+</ul>
+<p>打开<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode">Astro插件</a>,安装install跳转下载,回到vscode界面,右下键出现提示,选中安装即可</p>
+<ul>
+<li>在线安装</li>
+</ul>
+<p>在vscode界面扩展栏,搜索<strong>Astro</strong>安装最新版本即可<br><a target="_blank" rel="noopener" href="https://imgse.com/i/zn6NbF"><img src="https://s1.ax1x.com/2022/11/18/zn6NbF.jpg" alt="zn6NbF.jpg"></a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下边直接使用脚手架,与vite使用脚手架类似</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pnpm </span><br><span class="line">pnpm create astro@latest  <span class="string">&quot;项目名&quot;</span></span><br><span class="line">pnpm run dev </span><br></pre></td></tr></table></figure>
+<p>脚手架安装<br>新项目你想使用那种模板?</p>
+<ol>
+<li><p>一些最佳做法(官方推荐)</p>
+</li>
+<li><p>个人网站模板</p>
+</li>
+<li><p>空项目</p>
+</li>
+</ol>
+<p>可自行选择,我这选择<code>1</code>.</p>
+<p>是否使用pnpm安装包</p>
+<p>键入<code>y</code>,选择pnpm安装<br><a target="_blank" rel="noopener" href="https://imgse.com/i/znyPS0"><img src="https://s1.ax1x.com/2022/11/18/znyPS0.png" alt="znyPS0.png"></a></p>
+<p>是否git初始化仓库</p>
+<p>我远程仓库已存在此类仓库,不选择安装<br><a target="_blank" rel="noopener" href="https://imgse.com/i/znyilV"><img src="https://s1.ax1x.com/2022/11/18/znyilV.png" alt="znyilV.png"></a></p>
+<p>是否安装像TS</p>
+<p>选择<code>官方推荐</code>,每一种选择对应的TS配置不同</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/znyFyT"><img src="https://s1.ax1x.com/2022/11/18/znyFyT.png" alt="znyFyT.png"></a></p>
+<p><code>全部选择</code>完后将会出现</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/znykOU"><img src="https://s1.ax1x.com/2022/11/18/znykOU.png" alt="znykOU.png"></a></p>
+<p><code>运行启动</code>后展示页面,既表示成功安装运行<br><img src="https://s1.ax1x.com/2022/11/18/zn6dUJ.jpg" alt="启动展示"></p>
+<h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><p>样式可以说是前端写内容页面用的最多的东西</p>
+<p>在component目录下,新建<code>Title.astro</code>文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;this is my title&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  h1&#123;</span><br><span class="line">    /* color: red; */</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>在主文件<code>index.astro</code>引入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">import Title from &#x27;../components/Title.astro&#x27;</span><br><span class="line">import Layout from &#x27;../layouts/Layout.astro&#x27;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&lt;Layout title=&quot;Welcome to Astro.&quot;&gt;</span><br><span class="line">  &lt;main&gt;</span><br><span class="line">    &lt;h1&gt;Welcome to &lt;span class=&quot;text-gradient red&quot;&gt;Astro&lt;/span&gt;&lt;/h1&gt;</span><br><span class="line">    &lt;Title /&gt;</span><br><span class="line">  &lt;/main&gt;</span><br><span class="line">&lt;/Layout&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">  main &#123;</span><br><span class="line">    margin: auto;</span><br><span class="line">    padding: 1.5rem;</span><br><span class="line">    max-width: 60ch;</span><br><span class="line">  &#125;</span><br><span class="line">  h1 &#123;</span><br><span class="line">    font-size: 3rem;</span><br><span class="line">    font-weight: 800;</span><br><span class="line">    margin: 0;</span><br><span class="line">    color: red;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/znyZTJ"><img src="https://s1.ax1x.com/2022/11/18/znyZTJ.png" alt="znyZTJ.png"></a><br>上面能看出在两个组件<code>Title</code>和<code>Layout</code>中都定义h1标签,但两者的样式没有受到影响.<br>这是因为每个组件style标签是默认含有作用域</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123; <span class="attribute">color</span>: red; &#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.astro-xxx</span> &#123; <span class="attribute">color</span>: red; &#125;</span><br></pre></td></tr></table></figure>
+<p>想要开启当前组件全局作用域应该在style标签上设置<code>is:global</code>,<br>这样index.astro的样式就会一起影响到Title.astro中的样式了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//index.astro</span><br><span class="line">&lt;style is:global&gt;</span><br><span class="line">xxx</span><br><span class="line">&lt;style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>集成<code>less</code>预处理器</p>
+<blockquote>
+<p>pnpm i -D less</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;less&quot;&gt;</span><br><span class="line">h1&#123;</span><br><span class="line">  xx</span><br><span class="line">  span&#123;</span><br><span class="line">    xxx</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>从npm导入样式表<br>这边安装<a target="_blank" rel="noopener" href="https://necolas.github.io/normalize.css/">Normalize.css</a></p>
+<blockquote>
+<p>pnpm i -D normalize.css</p>
+</blockquote>
+<p>可考虑放在<code>Layout</code>目录下,或者框架入口文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// Layouts.astro</span><br><span class="line">---</span><br><span class="line">import &#x27;normalize.css&#x27;</span><br><span class="line"></span><br><span class="line">js逻辑代码...</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>完成后重启服务即可</p>
+<p>验证方法:调试控制台查看DOM样式来源文件</p>
+<h3 id="路由文件"><a href="#路由文件" class="headerlink" title="路由文件"></a>路由文件</h3><p>存在_post下的每一个文件名都为一个路由名,二级也是如此.</p>
+<p>Astro组件<br>讲下父传子参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// son.astro</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// prent.astro</span><br></pre></td></tr></table></figure>
+
+<p>模拟数据</p>
+<p>数据获取</p>
+<p>插件使用</p>
+<p>@Astro&#x2F;tailwind</p>
+<p>@Astro&#x2F;vue</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>帮助链接:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pnpm.io/">https://pnpm.io/</a></li>
+<li><a target="_blank" rel="noopener" href="https://astro.build/">https://astro.build/</a> </li>
+<li><a target="_blank" rel="noopener" href="https://vitejs.dev/">https://vitejs.dev/</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.vuejs.org/">https://cn.vuejs.org/</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000041323179?sort=votes">https://segmentfault.com/a/1190000041323179?sort=votes</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7148391839731548174">https://juejin.cn/post/7148391839731548174</a></li>
+<li><a target="_blank" rel="noopener" href="https://imgse.com/i/Vne6w4">https://imgse.com/i/Vne6w4</a></li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/withastro/astro/main/assets/social/banner-minimal.png" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/dushenyan-share-record-blog.github.io/2022/10/16/%E5%BC%80%E5%8F%91%E9%9A%8F%E8%AE%B0/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/dushenyan-share-record-blog.github.io/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Astro"><span class="toc-number">1.</span> <span class="toc-text">Astro</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Astro%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">Astro是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E9%A1%B5%E9%9D%A2%E6%A1%86%E6%9E%B6"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">多页面框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%82%E5%90%88%E5%9C%BA%E6%99%AF%EF%BC%88%E4%B8%BB%E9%9D%99%E6%80%81-x2F-%E5%B0%91%E4%BA%A4%E4%BA%92%EF%BC%89"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">适合场景（主静态&#x2F;少交互）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%89%8D%E5%A5%8F"><span class="toc-number">1.2.</span> <span class="toc-text">开发前奏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-number">1.3.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.1.</span> <span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.4.</span> <span class="toc-text">样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.1.</span> <span class="toc-text">路由文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.5.</span> <span class="toc-text"></span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By dushenyan</div><div class="footer_custom_text">衣带渐宽终不悔 为伊消得人憔悴</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/dushenyan-share-record-blog.github.io/js/utils.js"></script><script src="/dushenyan-share-record-blog.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/dushenyan-share-record-blog.github.io/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
