@@ -16,6 +16,8 @@ email: 2645472474@qq.com
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 # url: https://dbudaiya.github.io/
 # root: /dushenyan-share-record-blog.github.io
+root: ./
+
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
