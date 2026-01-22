@@ -44,7 +44,7 @@
     "social-share.js": "^1.0.16"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^6.6.1",
+    "@antfu/eslint-config": "^7.2.0",
     "eslint": "^9.39.1"
   }
 }
